@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testbase?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+  application:
+    name: testcloud-dept
+  jpa:
+    show-sql: true
+    open-in-view: true
+
+server:
+  port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: testcloud-dept8001-hystrix
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
+
+
+info:
+  app.name: atguigu-microservicecloud
+  company.name: www.atguigu.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
