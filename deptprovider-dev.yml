@@ -27,7 +27,7 @@ feign:
 
 
 info:
-  app.name: atguigu-microservicecloud
+  app.name: atguigu-microservicecloud1
   company.name: www.atguigu.com
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}
