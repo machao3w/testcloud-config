@@ -4,15 +4,15 @@
 #     - dev
 # ---
 server:
-  port: 7001
+  port: 7004
 spring:
   profiles: dev
 eureka:
   instance:
-    hostname: eureka7001.com
+    hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      defaultZone: http://eureka7001.com:7001/eureka/
+      defaultZone: http://localhost:7004/eureka/
